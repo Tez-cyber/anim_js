@@ -60,3 +60,24 @@ nav a {
 
 
 /* ============= Hero ============= */
+.hero h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #242726;
+    font-size: 20vw;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    letter-spacing: -0.5rem;
+    line-height: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero h1 .char {
+    position: relative;
+    will-change: transform;
+}
