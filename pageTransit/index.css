@@ -121,7 +121,7 @@ nav a {
 
 .col p {
     font-weight: 600;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     -webkit-font-smoohting: antialised;
     -moz-osx-font-smoothing: grayscale;
     color: #242726;
