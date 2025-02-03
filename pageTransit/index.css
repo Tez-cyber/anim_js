@@ -136,3 +136,15 @@ nav a {
     will-change: transform;
 }
 
+
+/* =============== animation */
+@keyframes move-out {
+    from  {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0.5;
+        transform: translateY(-35%);
+    }
+}
