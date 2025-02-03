@@ -148,3 +148,14 @@ nav a {
         transform: translateY(-35%);
     }
 }
+
+
+@keyframes move-in {
+    from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+}
