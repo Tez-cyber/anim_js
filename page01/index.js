@@ -1,5 +1,7 @@
 class App {
     constructor() {
+        this.heroImages = [...document.querySelectorAll('.hero__images img')];
+        this.texts = [...document.querySelectorAll('.text__effect')]
         this._initialize();
         this._render();
     }
@@ -9,6 +11,8 @@ class App {
         this._setInitialStates();
         this._createLenis();
         this._createIntro();
+        this._createHero();
+        this.createTextAnimation();
     }
 
     _setInitialStates() {
@@ -53,11 +57,30 @@ class App {
         }, .5)
     }
 
+
+    // Create Hero
+    _createHero() {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true, // adds scroll effect 
+            }
+        });
+
+        this.heroImages.forEach((image, index) => {
+            tl.to(image, {
+                ease: 'none',
+                yPercent: gsap.utils.random(-100, -50),
+            }, 0) // adding zero allows to run the animation at the same time.
+        })
+    }
     _render(time) {
         // raf = requestAnimationFrame
         this.lenis.raf(time);
 
-        // This will run 60 times per second then move to _render() again
+        // This will run 60 times per se    d then move to _render() again
         requestAnimationFrame(this._render.bind(this));
     }
 }
