@@ -44,7 +44,13 @@ class App {
             ease: "expo.out",
             duration: 2,
             stagger: 0.01
-        })
+        }).to('.hero__images img', {
+            opacity: 1,
+            y: 0,
+            ease: "power3.out",
+            duration: 2,
+            stagger: 0.04
+        }, .5)
     }
 
     _render(time) {
