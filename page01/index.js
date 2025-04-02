@@ -1,7 +1,7 @@
 class App {
     constructor() {
         this.heroImages = [...document.querySelectorAll('.hero__images img')];
-        this.texts = [...document.querySelectorAll('.text__effect')]
+        this.texts = [...document.querySelectorAll('.text__effect')];
         this._initialize();
         this._render();
     }
@@ -12,7 +12,7 @@ class App {
         this._createLenis();
         this._createIntro();
         this._createHero();
-        this.createTextAnimation();
+        this._createTextAnimation();
     }
 
     _setInitialStates() {
@@ -74,6 +74,33 @@ class App {
                 ease: 'none',
                 yPercent: gsap.utils.random(-100, -50),
             }, 0) // adding zero allows to run the animation at the same time.
+        })
+    }
+
+    // Text animation 
+    _createTextAnimation() {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.text-block',
+                start: 'top center',
+                end: 'bottom top',
+                scrub: true,
+            }
+        });
+
+        this.texts.forEach((text, index) => {
+            const overlay = text.querySelector('text__overlay')
+            const content = text.querySelector('p');
+
+            tl.to(overlay, {
+                scaleX: 0,
+            }).to(content, {
+                y:0,
+                opacity: 1,
+                ease: 'expo.out',
+                duration: 2,
+                delay: index * .1,
+            }, 0)
         })
     }
     _render(time) {
