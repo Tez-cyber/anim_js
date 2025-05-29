@@ -47,16 +47,16 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         const progress = self.progress;
         const clipPath = `polygon(
-            ${45 - 45 * progress}% ${0 + 0 * progress}%,
-            ${55 + 45 * progress}% ${0 + 0 * progress}%,
-            ${55 + 45 * progress}% ${100 - 0 * progress}%,
-            ${45 - 45 * progress}% ${100 - 0 * progress}%,
+            ${45 - 45 * progress}% 0%,
+            ${55 + 45 * progress}% 0%,
+            ${55 + 45 * progress}% 100%,
+            ${45 - 45 * progress}% 100%
         )`;
-        gsap.to(".revealer-1, .revealer-2", {
-            clipPath: clipPath,
+        gsap.set([".revealer-1", ".revealer-2"], { 
+            clipPath,
             ease: "none",
             duration: 0,
-        });
+         });
     },
 });
 
@@ -67,7 +67,7 @@ ScrollTrigger.create({
     scrub: 1,
     onUpdate: (self) => {
         const progress = self.progress;
-        const left = 35 + 15 * progress;
+        const left = 35 + 30 * progress;
         gsap.to(".revealer", {
             left: `${left}%`,
             ease: "none",

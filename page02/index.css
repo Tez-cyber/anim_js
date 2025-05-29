@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+
 * {
     margin: 0;
     padding: 0;
@@ -77,6 +79,7 @@ section.info {
 
 .header-info p {
     padding: 1em;
+    font-family: "PP Editorial Old";
     font-size: 52px;
     font-weight: lighter;
 }
