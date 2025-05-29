@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "PP Neue Montreal", sans-serif;
+    font-family: 'PP Neue Montreal', sans-serif;
 }
 
 img {
@@ -31,7 +31,8 @@ h1 span {
     -webkit-font-smoothing: antialiased;
 }
 
-a, p {
+a,
+p {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
@@ -68,7 +69,7 @@ a, p {
     will-change: transform;
 }
 
-.nav > div {
+.nav>div {
     flex: 1;
 }
 
@@ -231,7 +232,7 @@ a, p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 
 .count {
@@ -275,7 +276,7 @@ a, p {
 
 .line h1,
 .line p,
-.cta-label p, 
+.cta-label p,
 .count .digit h1 {
     position: relative;
     transform: translateY(120%);
@@ -306,7 +307,7 @@ a, p {
 @media (max-width: 900px) {
     h1 {
         font-size: 2.5rem;
-    }    
+    }
 
     .nav-links {
         display: none;
