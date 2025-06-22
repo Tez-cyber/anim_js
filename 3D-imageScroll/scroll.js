@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
                     initializeScene();
                 }
             };
-            img.src = `./assets/img${i}.jpg`
+            img.src = `./assets/img${i}.jpeg`
         }
     }
 
@@ -201,6 +201,7 @@ window.addEventListener("load", () => {
 
         let currentScroll = 0;
         lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+            console.log("Scroll progress:", progress); 
             currentScroll = scroll / limit;
             updateTexture(-currentScroll);
             renderer.render(scene, camera);
