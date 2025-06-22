@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollTrigger + GSAP Content Transiton</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- ===== hero ===== -->
+        <section class="hero">
+            <p>Scroll Down</p>
+        </section>
+        <!-- ===== sticky ==== -->
+        <section class="sticky">
+            <!-- first col -->
+            <div class="col">
+                <div class="services">
+                    <div class="indicator"></div>
+                    <div class="service active">
+                        <p>Deliverables</p>
+                    </div>
+                    <div class="service">
+                        <p>Brand & Event Design</p>
+                    </div>
+                    <div class="service">
+                        <p>Video & Fotographie</p>
+                    </div>
+                    <div class="service">
+                        <p>Motion Design</p>
+                    </div>
+                    <div class="service">
+                        <p>3D Graphics</p>
+                    </div>
+                    <div class="service">
+                        <p>Print & Drukwork</p>
+                    </div>
+                    <div class="service">
+                        <p>Digital Antwerp (UI/UX)</p>
+                    </div>
+                    <div class="service">
+                        <p>Web Dev</p>
+                    </div>
+                </div>
+            </div>
+            <!-- second col -->
+            <div class="col">
+                <div class="service-img-wrapper">
+                    <div class="service-img">
+                        <div class="img"><img src="./assets/img1.jpeg" alt=""></div>
+                        <div class="img"><img src="./assets/img2.jpeg" alt=""></div>
+                        <div class="img"><img src="./assets/img3.jpeg" alt=""></div>
+                        <div class="img"><img src="./assets/img4.jpeg" alt=""></div>
+                        <div class="img"><img src="./assets/img5.jpeg" alt=""></div>
+                        <div class="img"><img src="./assets/img6.jpeg" alt=""></div>
+                        <div class="img"><img src="./assets/img7.jpeg" alt=""></div>
+                    </div>
+                </div>
+                <div class="service-copy">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Suscipit temporibus quas voluptatum assumenda magnam ipsa 
+                        deserunt provident rem ducimus doloremque.
+                    </p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="index">
+                <span class="current-count">1</span>
+                <span class="seperator"></span>
+                <span class="total-count">7</span>
+            </div>
+        </section>
+        <!-- ====== outro -->
+        <section class="outro">
+            <p>Your next section goes here</p>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+</body>
+
+</html>
